@@ -1,0 +1,37 @@
+[package]
+name = "stockdex"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "stockdex"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build"]
+
+
+[dependencies]
+ahash = "0.8.12"
+anchor-lang = {version = "0.31.1", features = ["init-if-needed"]}
+anchor-spl = "0.31.1"
+bytemuck = "1.23.1"
+num = "0.4.3"
+num-traits = "0.2.19"
+pyth-sdk-solana = "0.10.5"
+solana-program = "2.3.0"
+
+[dev-dependencies]
+bincode = "2.0.1"
+bonfida-test-utils = "0.7.0"
+maplit = "1.0.2"
+solana-program-test = "2.3.3"
+solana-sdk = "2.3.1"
+tokio = "1.46.1"
+
