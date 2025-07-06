@@ -64,6 +64,11 @@ impl anchor_lang::Id for Perpetuals {
 
 impl Perpetuals {
     pub const LEN: usize = 8 + std::mem::size_of::<Perpetuals>();
+
+    // basis pts - 1 pt = 0.01%
+    pub const BPS_DECIMALS: u8 = 4;
+    pub const BPS_POWER: u128 = 10u64.pow(Self::BPS_DECIMALS as u32) as u128;
+
     pub const PRICE_DECIMALS: u8 = 6;
     pub const USD_DECIMALS:   u8 = 6;
 
