@@ -87,6 +87,10 @@ impl Perpetuals {
 	    }
 	}
 
+    pub fn is_empty_account(acc: &AccountInfo) -> Result<bool> {
+        Ok(acc.try_data_is_empty()? || acc.try_lamports()? == 0)
+    }
+
     // when runtime authority is pda, seed/bump so program can sign it:
     pub fn transfer_token<'info>(
         &self, 
