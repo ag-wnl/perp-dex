@@ -2,6 +2,7 @@ use anchor_lang::prelude::*;
 mod error;
 mod math;
 mod state;
+mod instructions;
 
 declare_id!("GDtgSdFsBYezcXHPRywtrU9hxktFHDZvEyA22QEBnuYV");
 
