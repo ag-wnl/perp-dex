@@ -34,8 +34,8 @@ pub struct Position {
     pub owner: Pubkey,
     pub pool: Pubkey,
 
-    pub custody: Pubkey, // acc holding position's trading asset
-    pub collateral_custody: Pubkey, // acc holding the collateral for this posn
+    pub custody: Pubkey, // acc holding position's actual trading asset (ex: sol)
+    pub collateral_custody: Pubkey, // acc holding the collateral for this posn - the vault where the user’s deposited collateral is stored and used for margin, PnL, and liquidations
 
     pub open_time: i64,
     pub update_time: i64,
